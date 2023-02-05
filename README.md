@@ -5,7 +5,7 @@ PlantUml v1.2023.1
 ## Usage
 
 ```
-[{PlantUml 
+[{plantuml 
 
 Alice -> Bob: test
 }]
