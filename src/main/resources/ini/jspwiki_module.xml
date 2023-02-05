@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<modules>
+   <plugin class="hu.pmamico.jspwiki.plugin.PlantUmlPlugin">
+      <author>Mico Papp</author>
+      <minVersion>2.10.1</minVersion>
+      <alias>plantuml</alias>
+   </plugin>
+</modules>
