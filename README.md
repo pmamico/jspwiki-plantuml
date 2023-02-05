@@ -13,7 +13,10 @@ Alice -> Bob: test
 
 ## Installation
 
-1. copy `bin/PlantUmlPlugin-0.2.jar` under `${TOMCAT_HOME}/webapps/JSPWiki/WEB-INF/lib/`
+1. download `bin/PlantUmlPlugin-1.0.jar` into `${TOMCAT_HOME}/webapps/JSPWiki/WEB-INF/lib/`
+```shell
+wget "https://github.com/pmamico/jspwiki-plantuml/blob/master/bin/PlantUmlPlugin-1.0.jar?raw=true"
+```
 2. in `../JSPWiki/WEB-INF/jspwiki-custom.properties` file, edit the comma-delimited `jspwiki.plugin.searchPath` property to include the package designation of the plugin
 ```properties
 jspwiki.plugin.searchPath = hu.pmamico.jspwiki.plugin
