@@ -4,12 +4,8 @@ for [JSPWiki](https://jspwiki.apache.org/) v2.10.1+
 
 ## Usage
 
-```
-[{plantuml 
+![usage](.github/usage.png)
 
-Alice -> Bob: test
-}]
-```
 
 ## Installation
 
