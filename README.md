@@ -9,11 +9,11 @@ for [JSPWiki](https://jspwiki.apache.org/) v2.10.1+
 
 ## Installation
 
-1. download `bin/PlantUmlPlugin-1.0.jar` into `${JSPWIKI_HOME}/WEB-INF/lib/`
+1. download the jar into `${JSPWIKI_HOME}/WEB-INF/lib/`
 ```shell
-wget "https://github.com/pmamico/jspwiki-plantuml/blob/master/bin/PlantUmlPlugin-1.0.jar?raw=true"
+wget "https://github.com/pmamico/jspwiki-plantuml/blob/master/bin/PlantUmlPlugin-1.0.jar?raw=true" -O plantuml-plugin.jar
 ```
-2. in `${JSPWIKI_HOME}/WEB-INF/jspwiki-custom.properties` file, edit the comma-delimited ``jspwiki.plugin.searchPath`` property to include the package designation of the plugin
+2. edit the comma-delimited ``jspwiki.plugin.searchPath`` in `${JSPWIKI_HOME}/WEB-INF/jspwiki-custom.properties` to include the package designation of the plugin
 ```properties
 jspwiki.plugin.searchPath = hu.pmamico.jspwiki.plugin
 ```
