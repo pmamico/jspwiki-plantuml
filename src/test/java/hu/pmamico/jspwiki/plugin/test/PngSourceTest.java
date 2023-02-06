@@ -1,10 +1,6 @@
 package hu.pmamico.jspwiki.plugin.test;
 
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
-
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 import org.junit.jupiter.api.Test;
 
