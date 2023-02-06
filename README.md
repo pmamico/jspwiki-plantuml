@@ -8,7 +8,7 @@ for [JSPWiki](https://jspwiki.apache.org/) v2.10.1+
 
 Also you can use link attribute to link PNG source under the SVG.  
 ```
-[{plantuml link="Download"
+[{plantuml link="PNG"
 
 start
 :Hello World;
