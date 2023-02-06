@@ -3,6 +3,9 @@ package hu.pmamico.jspwiki.plugin;
 import java.io.ByteArrayOutputStream;
 import java.nio.charset.StandardCharsets;
 import java.util.Map;
+import java.util.Scanner;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import org.apache.log4j.Logger;
 import org.apache.wiki.WikiContext;
@@ -24,6 +27,7 @@ public class PlantUmlPlugin implements WikiPlugin {
 		String svg = "";
 		try {
 			String body = params.get("_body");
+			String pngLink = params.get("link");
 
 			if (body == null || "".equals(body.trim())) {
 				return "Try something like this:<br>" +
@@ -43,12 +47,28 @@ public class PlantUmlPlugin implements WikiPlugin {
 			reader.outputImage(os, new FileFormatOption(FileFormat.SVG)).getDescription();
 			os.close();
 			svg = new String(os.toByteArray(), StandardCharsets.UTF_8);
+			if(pngLink != null){
+				svg = svg+ "<br><a href='"+getPngSource(svg)+"'>"+pngLink+"</a>";
+			}
+
 
 		} catch (Exception e) {
 			throw new RuntimeException(e);
 		}
 
 		return svg;
+	}
+
+	public String getPngSource(String svg){
+		Pattern pattern = Pattern.compile("SRC=\\[.*\\]");
+		Matcher matcher = pattern.matcher(svg);
+		String source = "";
+		if (matcher.find()) {
+			source = matcher.group(0);
+			source = source.replace("SRC=[", "").replace("]", "");
+		}
+
+		return "https://www.plantuml.com/plantuml/png/"+source;
 	}
 
 }
