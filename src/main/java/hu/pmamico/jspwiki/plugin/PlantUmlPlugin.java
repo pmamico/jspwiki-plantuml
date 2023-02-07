@@ -56,7 +56,6 @@ public class PlantUmlPlugin implements WikiPlugin {
 
 		return svg;
 	}
-
 	public String getPngSource(String svg){
 		Pattern pattern = Pattern.compile("SRC=\\[.*\\]");
 		Matcher matcher = pattern.matcher(svg);
