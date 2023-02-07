@@ -20,7 +20,7 @@ stop
 
 1. download the jar into `${JSPWIKI_HOME}/WEB-INF/lib/`
 ```shell
-wget "https://github.com/pmamico/jspwiki-plantuml/blob/master/bin/PlantUmlPlugin-1.1.jar?raw=true" -O plantuml-plugin.jar
+wget "https://github.com/pmamico/jspwiki-plantuml/blob/master/bin/PlantUmlPlugin-1.2.jar?raw=true" -O plantuml-plugin.jar
 ```
 2. edit the comma-delimited ``jspwiki.plugin.searchPath`` in `${JSPWIKI_HOME}/WEB-INF/jspwiki-custom.properties` to include the package designation of the plugin
 ```properties

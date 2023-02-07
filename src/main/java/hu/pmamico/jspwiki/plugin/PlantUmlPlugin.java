@@ -27,7 +27,6 @@ public class PlantUmlPlugin implements WikiPlugin {
 		String svg = "";
 		try {
 			String body = params.get("_body");
-			String pngLink = params.get("link");
 
 			if (body == null || "".equals(body.trim())) {
 				return "Try something like this:<br>" +
@@ -44,13 +43,12 @@ public class PlantUmlPlugin implements WikiPlugin {
 
 			SourceStringReader reader = new SourceStringReader(body);
 			final ByteArrayOutputStream os = new ByteArrayOutputStream();
-			reader.outputImage(os, new FileFormatOption(FileFormat.SVG)).getDescription();
+			reader.outputImage(os, new FileFormatOption(FileFormat.PNG));
+			byte[] imageBytes = os.toByteArray();
 			os.close();
-			svg = new String(os.toByteArray(), StandardCharsets.UTF_8);
-			if(pngLink != null){
-				svg = svg+ "<br><a href='"+getPngSource(svg)+"'>"+pngLink+"</a>";
-			}
 
+			String base64Image = javax.xml.bind.DatatypeConverter.printBase64Binary(imageBytes);
+			svg = "<img src='data:image/png;base64," + base64Image + "'>";
 
 		} catch (Exception e) {
 			throw new RuntimeException(e);
