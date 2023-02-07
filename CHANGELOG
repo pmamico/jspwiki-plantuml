@@ -1,0 +1,36 @@
+
+# Change Log
+All notable changes to this project will be documented in this file.
+ 
+The format is based on [Keep a Changelog](http://keepachangelog.com/)
+and this project adheres to [Semantic Versioning](http://semver.org/).
+ 
+## [1.2] - 2023-02-07
+ 
+### Added
+ 
+### Changed
+
+- Changed rendering from SVG to PNG, therefore `link` attribute was removed.
+ 
+### Fixed
+ 
+## [1.1] - 2023-02-06
+ 
+### Added
+
+- Added some hints if the user use the alias without an UML source code.
+- Added option to download as PNG over plantuml.com ('link' attribute)
+ 
+### Changed
+  
+### Fixed
+ 
+ 
+## [1.0] - 2023-02-05
+ 
+### Added
+
+- Initial release, prod ready. It can be used with alias [{plantuml}] rendering in SVG.
+   
+### Changed
