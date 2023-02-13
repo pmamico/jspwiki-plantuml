@@ -6,16 +6,6 @@ for [JSPWiki](https://jspwiki.apache.org/) v2.10.1+
 
 ![usage](.github/usage.png)
 
-Also you can use link attribute to link PNG source under the SVG.  
-```
-[{plantuml
-
-start
-:Hello World;
-stop
-}]
-```
-
 ## Installation
 
 1. download the jar into `${JSPWIKI_HOME}/WEB-INF/lib/`
